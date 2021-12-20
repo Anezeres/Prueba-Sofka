@@ -21,7 +21,6 @@ nombre = input("¿Cual es tu nombre jugador?: ")
 jugador = Jugador(nombre,0)
 print("Bienvenido ",jugador.getNombre(), " a nuestro cuestionario")
 print("¿Que tan fan eres de las peliculas de Marvel?")
-ronda1()
 
 
 def siguienteRonda(numero):
@@ -47,11 +46,11 @@ def respuestaCorrecta(respuesta,respuestaUsuario,rondaSiguiente):
     if (respuesta == respuestaUsuario):
         print("¡Respuesta Correcta!")
         jugador.agregarPuntos()
-        print("Excelente!, ganaste 1000 puntos!, actualmente tienes: ", jugador.getPuntos())
+        print("Excelente! ",jugador.getNombre() ,", ganaste 1000 puntos!, actualmente tienes: ", jugador.getPuntos())
         siguienteRonda(rondaSiguiente)
         pass
 
-    elif (respuesta =! respuestaUsuario):
+    elif (respuesta != respuestaUsuario):
         print("Lo siento, la respuesta no es correcta") 
         print("El concurso ha finalizado.")
         print("Puntos totales alcanzador: ",jugador.getPuntos())
@@ -85,7 +84,7 @@ def ronda1():
         print("D) 2012")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,2)
+        respuestaCorrecta("B",respuestaUsuario,2)
 
         pass
     elif (pregunta == 2):
@@ -96,7 +95,7 @@ def ronda1():
         print("D) Norn")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,2)
+        respuestaCorrecta("B",respuestaUsuario,2)
         pass
     elif (pregunta == 3):
         print("1. ¿Cuál es el verdadero nombre de la Bruja Escarlata?")
@@ -106,7 +105,7 @@ def ronda1():
         print("D) Hayley")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,2)
+        respuestaCorrecta("A",respuestaUsuario,2)
         pass
     elif (pregunta == 4):
         print("1. ¿De qué está hecho el escudo del Capitán América?")
@@ -116,7 +115,7 @@ def ronda1():
         print("D) Carbonadio")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,2)
+        respuestaCorrecta("B",respuestaUsuario,2)
         pass
     else:
         print("1. Los Flerkens son una raza de alienígenas extremadamente peligrosos que se parece a qué.")
@@ -126,7 +125,7 @@ def ronda1():
         print("D) Mapaches")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,2)
+        respuestaCorrecta("A",respuestaUsuario,2)
         pass
 
 
@@ -146,7 +145,7 @@ def ronda2():
         print("D) N'Jadaka")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,3)
+        respuestaCorrecta("B",respuestaUsuario,3)
         pass
     elif (pregunta == 2):
         print("2. ¿Cuál es la raza alienígena que Loki envía para invadir la Tierra en The Avengers?")
@@ -157,7 +156,7 @@ def ronda2():
 
                            
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,3)
+        respuestaCorrecta("A",respuestaUsuario,3)
         pass
     elif (pregunta == 3):
         print("2. ¿Qué nombre falso usa Natasha cuando conoce a Tony por primera vez?")
@@ -167,7 +166,7 @@ def ronda2():
         print("D) Naya Rabe")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,3)
+        respuestaCorrecta("A",respuestaUsuario,3)
         pass
     elif (pregunta == 4):
         print("2. ¿Sobre qué ciudad recuerdan a menudo Hawkeye y Black Widow?")
@@ -178,7 +177,7 @@ def ronda2():
 
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,3)
+        respuestaCorrecta("A",respuestaUsuario,3)
         pass
     else:
         print("2. ¿A quién sacrifica el Titán Loco para adquirir la Piedra del Alma?")
@@ -188,7 +187,7 @@ def ronda2():
         print("D) Gamora")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("D",respuestaUsuario2,3)
+        respuestaCorrecta("D",respuestaUsuario,3)
         pass
 
     pass
@@ -207,7 +206,7 @@ def ronda3():
         print("D) ¿Qué dijiste?")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,4)
+        respuestaCorrecta("A",respuestaUsuario,4)
         pass
     elif (pregunta == 2):
         print("3. ¿Cuáles fueron los tres elementos que Rocket afirma que necesita para escapar de la prisión?")
@@ -217,7 +216,7 @@ def ronda3():
         print("D) Un cuchillo, cables y la cinta de mezcla de Peter.")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,4)
+        respuestaCorrecta("B",respuestaUsuario,4)
         pass
     elif (pregunta == 3):
         print("3. ¿Qué palabra pronuncia Tony que hace que Steve diga 'Lenguaje'? ")
@@ -227,7 +226,7 @@ def ronda3():
         print("D) ¡Diablos!")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,4)
+        respuestaCorrecta("A",respuestaUsuario,4)
         pass
     elif (pregunta == 4):
         print("3. ¿Quién es asesinado por Loki en los Vengadores?")
@@ -237,7 +236,7 @@ def ronda3():
         print("D) Doctor Erik Selvig")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("C",respuestaUsuario2,4)
+        respuestaCorrecta("C",respuestaUsuario,4)
         pass
     else:
         print("3. ¿Quién es la hermana de Black Panther?")
@@ -247,7 +246,7 @@ def ronda3():
         print("D) Okoye")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,4)
+        respuestaCorrecta("A",respuestaUsuario,4)
         pass
 
     pass
@@ -266,7 +265,7 @@ def ronda4():
         print("D) Puente Golden Gate")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,5)
+        respuestaCorrecta("A",respuestaUsuario,5)
         pass
     elif (pregunta == 2):
         print("4. ¿Qué canción baila Baby Groot al final del primer Guardian of the Galaxy?")
@@ -276,7 +275,7 @@ def ronda4():
         print("D) 'Enganchado a un sentimiento' - Voidoid")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("C",respuestaUsuario2,5)
+        respuestaCorrecta("C",respuestaUsuario,5)
         pass
     elif (pregunta == 3):
         print("4. ¿Qué tipo de médico es Stephen Strange?")
@@ -286,7 +285,7 @@ def ronda4():
         print("D) Cirujano Plástico")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,5)
+        respuestaCorrecta("A",respuestaUsuario,5)
         pass
     elif (pregunta == 4):
         print("4. ¿Cuál es el verdadero nombre de Deadpool?")
@@ -296,7 +295,7 @@ def ronda4():
         print("D) Bob Wilson")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,5)
+        respuestaCorrecta("B",respuestaUsuario,5)
         pass
     else:
         print("4. ¿En qué película apareció The Aether por primera vez?")
@@ -306,7 +305,7 @@ def ronda4():
         print("D) Thor")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,5)
+        respuestaCorrecta("A",respuestaUsuario,5)
         pass
 
     pass
@@ -325,7 +324,7 @@ def ronda5():
         print("D) 7")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,6)
+        respuestaCorrecta("B",respuestaUsuario,6)
         pass
     elif (pregunta == 2):
         print("5. ¿Quién mató a los padres de Tony Stark?")
@@ -335,7 +334,7 @@ def ronda5():
         print("D) Hulk")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("C",respuestaUsuario2,6)
+        respuestaCorrecta("C",respuestaUsuario,6)
         pass
     elif (pregunta == 3):
         print("5. ¿Cuál es la única película de Marvel que no tiene una escena posterior al crédito?")
@@ -345,7 +344,7 @@ def ronda5():
         print("D) Avengers: Endgame")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("D",respuestaUsuario2,6)
+        respuestaCorrecta("D",respuestaUsuario,6)
         pass
     elif (pregunta == 4):
         print("5. ¿Qué especie se revela que es Loki?")
@@ -355,7 +354,7 @@ def ronda5():
         print("D) Atlanteans")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("B",respuestaUsuario2,6)
+        respuestaCorrecta("B",respuestaUsuario,6)
         pass
     else:
         print("5. ¿Cuál es el nombre del universo microscópico al que viaja Ant-Man cuando se vuelve subatómico?")
@@ -365,11 +364,20 @@ def ronda5():
         print("D) Reino Diminuto")
 
         respuestaUsuario = input("Ingrese su respuesta A,B,C o D: ")
-        respuestaCorrecta("A",respuestaUsuario2,6)
+        respuestaCorrecta("A",respuestaUsuario,6)
         pass
 
 
     pass
 
+ronda1()
 
 print("Los puntos totales que conseguiste= ", jugador.getPuntos())
+
+if (jugador.getPuntos() == 5000):
+    print("Eres un verdadero fan de Marvel.")
+elif (jugador.getPuntos() == 4000):
+    print("Por poco alcanzas los 5000 puntos, ve a verte las peliculas.")
+elif (jugador.getPuntos() == 3000):
+    print("Un poco regular, va a verte las peliculas.")
+  
