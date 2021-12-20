@@ -1,8 +1,28 @@
 import math
 import random
 
-print("Bienvenido a nuestro cuestionario")
+
+class Jugador:
+    def __init__(self, nombre, puntos):
+        self.nombre = nombre
+        self.puntos = puntos
+
+    def getNombre(self):
+        return self.nombre
+
+    def getPuntos(self):
+        return self.puntos
+
+    def agregarPuntos(self):
+        self.puntos += 1000 
+
+
+nombre = input("¿Cual es tu nombre jugador?: ")
+jugador = Jugador(nombre,0)
+print("Bienvenido ",jugador.getNombre(), " a nuestro cuestionario")
 print("¿Que tan fan eres de las peliculas de Marvel?")
+ronda1()
+
 
 def siguienteRonda(numero):
     if numero == 1:
@@ -26,8 +46,22 @@ def siguienteRonda(numero):
 def respuestaCorrecta(respuesta,respuestaUsuario,rondaSiguiente):
     if (respuesta == respuestaUsuario):
         print("¡Respuesta Correcta!")
+        jugador.agregarPuntos()
+        print("Excelente!, ganaste 1000 puntos!, actualmente tienes: ", jugador.getPuntos())
         siguienteRonda(rondaSiguiente)
         pass
+
+    elif (respuesta =! respuestaUsuario):
+        print("Lo siento, la respuesta no es correcta") 
+        print("El concurso ha finalizado.")
+        print("Puntos totales alcanzador: ",jugador.getPuntos())
+        intento = int(input("¿Quieres volver a Jugar? Si = 1, No = 2:"))
+
+        if (intento == 1):
+            ronda1()
+        else:
+            print("Está bien, Vuelva pronto!")
+
     else: 
         print("Lo siento, el valor ingresado no corresponde a una respuesta")
         print("Ingrese Nuevamente su Respuesta")
@@ -336,3 +370,6 @@ def ronda5():
 
 
     pass
+
+
+print("Los puntos totales que conseguiste= ", jugador.getPuntos())
